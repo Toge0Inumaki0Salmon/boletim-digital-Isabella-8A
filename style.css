@@ -60,7 +60,7 @@ body {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #333;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -100,7 +100,7 @@ table.boletim td {
 
 table.boletim thead th {
   background-color: #111;
-  color: #fff;
+  color: #fc7a00;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.5px;

@@ -8,7 +8,7 @@
 /* ===== CORPO DA PÁGINA ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #e91111;
+  background-color: #aa320d;
   color: #111;
   padding: 16px;
   line-height: 1.4;
@@ -115,7 +115,7 @@ table.boletim th:first-child {
 
 /* Linhas alternadas */
 table.boletim tbody tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: #fc7a00;
 }
 
 /* Cores das situações */
@@ -125,7 +125,7 @@ table.boletim tbody tr:nth-child(even) {
 }
 
 .situacao-atencao {
-  color: #ad0a25; /* vermelho */
+  color: #7e0116; /* vermelho */
   font-weight: bold;
 }
 

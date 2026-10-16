@@ -14,50 +14,103 @@
     <p class="subtitulo">8º Ano — Estudante Exemplo</p>
   </header>
 
-  <!-- CARDS DE RESUMO (serão preenchidos pelo JavaScript) -->
-  <section class="cards" id="cards">
-    <div class="card">
-      <span class="card-titulo">Média geral</span>
-      <span class="card-valor" id="media-geral">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Total de faltas</span>
-      <span class="card-valor" id="total-faltas">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Bom desempenho</span>
-      <span class="card-valor" id="total-bom">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Precisam de atenção</span>
-      <span class="card-valor" id="total-atencao">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Frequência</span>
-      <span class="card-valor" id="frequencia">—</span>
-      <span class="card-obs" id="frequencia-obs"></span>
+  <!-- ÁREA DE PIN / ACESSO -->
+  <section class="area-login" id="area-login">
+    <div class="card-login">
+      <h3>Acesso ao Boletim</h3>
+      <p class="info-aluno">Turma: <strong>8A</strong> | Chamada: <strong>14</strong></p>
+      <div class="form-login">
+        <label for="campo-pin">PIN:</label>
+        <input type="password" id="campo-pin" placeholder="Digite seu PIN" maxlength="20" autocomplete="off" />
+        <button type="button" id="btn-entrar">Entrar</button>
+      </div>
+      <p class="mensagem-status" id="msg-login"></p>
     </div>
   </section>
 
-  <!-- TABELA DE NOTAS -->
-  <section class="tabela-area">
-    <table class="boletim">
-      <thead>
-        <tr>
-          <th>Disciplina</th>
-          <th>1º Tri</th>
-          <th>2º Tri</th>
-          <th>3º Tri</th>
-          <th>Média</th>
-          <th>Faltas</th>
-          <th>Situação</th>
-        </tr>
-      </thead>
-      <tbody id="corpo-tabela">
-        <!-- As linhas serão criadas pelo JavaScript -->
-      </tbody>
-    </table>
-  </section>
+  <!-- PAINEL PRINCIPAL DO BOLETIM (OCULTO ATÉ O LOGIN) -->
+  <main id="painel-boletim" style="display: none;">
+
+    <!-- BARRA DE AÇÕES -->
+    <div class="barra-acoes">
+      <button type="button" id="btn-editar" class="btn-acao">Alterar dados</button>
+      <span class="mensagem-status" id="msg-salvar"></span>
+    </div>
+
+    <!-- CARDS DE RESUMO -->
+    <section class="cards" id="cards">
+      <div class="card">
+        <span class="card-titulo">Média geral</span>
+        <span class="card-valor" id="media-geral">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Total de faltas</span>
+        <span class="card-valor" id="total-faltas">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Bom desempenho</span>
+        <span class="card-valor" id="total-bom">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Precisam de atenção</span>
+        <span class="card-valor" id="total-atencao">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Frequência</span>
+        <span class="card-valor" id="frequencia">—</span>
+        <span class="card-obs" id="frequencia-obs"></span>
+      </div>
+    </section>
+
+    <!-- TABELA DE NOTAS -->
+    <section class="tabela-area">
+      <table class="boletim">
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+          <!-- As linhas serão criadas pelo JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PAINEL DE EDIÇÃO -->
+    <section id="painel-edicao" class="painel-edicao" style="display: none;">
+      <h3>Editar Notas e Faltas</h3>
+      <div class="tabela-area-edicao">
+        <table class="boletim-edicao">
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Faltas 1º</th>
+              <th>Faltas 2º</th>
+              <th>Faltas 3º</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela-edicao">
+            <!-- Linhas de edição geradas via JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="acoes-edicao">
+        <button type="button" id="btn-salvar" class="btn-salvar">Salvar alterações</button>
+        <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+      </div>
+      <p class="mensagem-status" id="msg-edicao"></p>
+    </section>
+
+  </main>
 
   <!-- RODAPÉ -->
   <footer class="rodape">

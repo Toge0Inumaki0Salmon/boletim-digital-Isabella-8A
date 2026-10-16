@@ -35,6 +35,168 @@ body {
   margin-top: 4px;
 }
 
+/* ===== ÁREA DE LOGIN / PIN ===== */
+.area-login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.card-login {
+  background-color: #2e2d2d;
+  border: 4px solid #7c0707;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 4px 4px 0 #580311;
+}
+
+.card-login h3 {
+  color: #fc7a00;
+  margin-bottom: 8px;
+}
+
+.info-aluno {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.form-login {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login label {
+  font-weight: bold;
+  color: #f09205;
+}
+
+.form-login input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 2px solid #7c0707;
+  background-color: #111;
+  color: #fff;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-login button,
+.btn-acao,
+.btn-salvar,
+.btn-cancelar {
+  padding: 8px 16px;
+  background-color: #ec0505;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-login button:hover,
+.btn-acao:hover,
+.btn-salvar:hover {
+  background-color: #fc7a00;
+  color: #111;
+}
+
+.btn-cancelar {
+  background-color: #555;
+}
+
+.btn-cancelar:hover {
+  background-color: #777;
+}
+
+.barra-acoes {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== PAINEL DE EDIÇÃO ===== */
+.painel-edicao {
+  background-color: #2e2d2d;
+  border: 4px solid #7c0707;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  color: #fff;
+}
+
+.painel-edicao h3 {
+  color: #fc7a00;
+  margin-bottom: 12px;
+}
+
+.tabela-area-edicao {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+table.boletim-edicao {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+table.boletim-edicao th,
+table.boletim-edicao td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+table.boletim-edicao th {
+  background-color: #111;
+  color: #fc7a00;
+  font-size: 0.8rem;
+}
+
+table.boletim-edicao td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
+
+.input-nota,
+.input-falta {
+  width: 60px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #7c0707;
+  border-radius: 4px;
+  background-color: #111;
+  color: #fff;
+}
+
+.input-invalido {
+  border: 2px solid #ff0000 !important;
+  background-color: #4a0000 !important;
+}
+
+.acoes-edicao {
+  display: flex;
+  gap: 12px;
+}
+
+.mensagem-status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #f09205;
+}
+
 /* ===== ÁREA DOS CARDS ===== */
 .cards {
   display: grid;
@@ -60,7 +222,7 @@ body {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #000000;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -72,7 +234,7 @@ body {
 
 .card-obs {
   font-size: 0.75rem;
-  color: #666;
+  color: #ccc;
 }
 
 /* ===== TABELA ===== */
@@ -130,7 +292,7 @@ table.boletim tbody tr:nth-child(even) {
 }
 
 .situacao-indisponivel {
-  color: #888;
+  color: #444;
   font-style: italic;
 }
 

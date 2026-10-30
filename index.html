@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,7 +29,7 @@
     </div>
   </section>
 
-  <!-- PAINEL PRINCIPAL DO BOLETIM (OCULTO ATÉ O LOGIN) -->
+  <!-- PAINEL PRINCIPAL DO BOLETIM -->
   <main id="painel-boletim" style="display: none;">
 
     <!-- BARRA DE AÇÕES -->
@@ -60,6 +61,48 @@
         <span class="card-valor" id="frequencia">—</span>
         <span class="card-obs" id="frequencia-obs"></span>
       </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="area-graficos" aria-label="Gráficos do boletim">
+
+      <!-- GRÁFICO 1 -->
+      <article class="grafico-card">
+        <h2>Média por disciplina</h2>
+        <div class="grafico-container grafico-medias-container">
+          <canvas
+            id="graficoMediasDisciplinas"
+            role="img"
+            aria-label="Gráfico de barras horizontais com a média atual de cada disciplina">
+          </canvas>
+        </div>
+      </article>
+
+      <!-- GRÁFICO 2 -->
+      <article class="grafico-card">
+        <h2>Evolução da média geral</h2>
+        <div class="grafico-container">
+          <canvas
+            id="graficoEvolucaoTrimestres"
+            role="img"
+            aria-label="Gráfico de linha com a evolução das médias dos três trimestres">
+          </canvas>
+        </div>
+      </article>
+
+      <!-- GRÁFICO 3 -->
+      <article class="grafico-card" id="card-grafico-faltas">
+        <h2>Faltas por trimestre</h2>
+        <div id="estadoFaltas" aria-live="polite"></div>
+        <div class="grafico-container">
+          <canvas
+            id="graficoFaltasTrimestres"
+            role="img"
+            aria-label="Gráfico de barras com as faltas do primeiro, segundo e terceiro trimestres">
+          </canvas>
+        </div>
+      </article>
+
     </section>
 
     <!-- TABELA DE NOTAS -->
@@ -117,6 +160,11 @@
     <p>Projeto escolar fictício — dados apenas para demonstração.</p>
   </footer>
 
+  <!-- BIBLIOTECA DOS GRÁFICOS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JAVASCRIPT PRINCIPAL -->
   <script src="script.js"></script>
+
 </body>
 </html>
